@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'none',
@@ -7,6 +8,18 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname,'dist')
     },
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist',
+        hot: true,
+        host: 'localhost',
+        port: 9000,
+        compress: true,
+        inline: true
+    },
+    plugins:[
+        new webpack.HotModuleReplacementPlugin()
+    ],
     module: {
         rules: [
             {

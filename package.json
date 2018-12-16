@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --mode development"
   },
   "keywords": [],
   "author": "wgying",
@@ -14,7 +16,8 @@
     "file-loader": "^2.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
     "leaflet": "^1.3.4"
